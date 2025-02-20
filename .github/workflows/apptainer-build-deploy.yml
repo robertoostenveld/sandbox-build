@@ -1,9 +1,9 @@
 name: Apptainer Build Deploy
 
 on:
-  pull_request:
   push:
-    tags: [ 'v*.*.*' ]
+    tags:        
+      - '*'           # Push events to every tag not containing /
 
 jobs:
   build-test-container:
