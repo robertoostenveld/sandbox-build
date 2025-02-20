@@ -24,9 +24,11 @@ jobs:
 
       - name: Build Container
         run: |
-           apptainer build lolcow.sif lolcow.def
+          apptainer build lolcow.sif lolcow.defs
+          apptainer build fortune.sif fortune.def
 
       - name: Login and Deploy Container
         run: |
-           echo ${{ secrets.GITHUB_TOKEN }} | apptainer registry login -u "${{ github.actor }}" --password-stdin oras://ghcr.io
-           apptainer push lolcow.sif oras://ghcr.io/${GITHUB_REPOSITORY}:${tag}
+          echo ${{ secrets.GITHUB_TOKEN }} | apptainer registry login -u "${{ github.actor }}" --password-stdin oras://ghcr.io
+          apptainer push lolcow.sif oras://ghcr.io/lolcow:${tag}
+          apptainer push fortune.sif oras://ghcr.io/fortune:${tag}
