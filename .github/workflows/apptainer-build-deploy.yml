@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Container
         run: |
-          apptainer build lolcow.sif lolcow.defs
+          apptainer build lolcow.sif lolcow.def
           apptainer build fortune.sif fortune.def
 
       - name: Login and Deploy Container
