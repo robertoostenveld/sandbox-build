@@ -1,3 +1,3 @@
 # sandbox-build
 
-This is a test repository for using GitHub actions to build containers and to store those in a package.
+This is a test to build Apptainer containers using GitHub actions and to store them as GitHub packages.

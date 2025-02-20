@@ -1,0 +1,12 @@
+BootStrap: docker
+From: alpine:latest
+
+%labels
+    org.opencontainers.image.source=https://github.com/robertoostenveld/sandbox-build
+    org.opencontainers.image.licenses=GPL-3.0+
+
+%runscript
+    echo Hello World
+
+%labels
+    Author Robert
