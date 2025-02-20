@@ -1,6 +1,10 @@
 BootStrap: docker
 From: ubuntu:latest
 
+%labels
+    org.opencontainers.image.source=https://github.com/robertoostenveld/sandbox-build
+    org.opencontainers.image.licenses=GPL-3.0+
+
 %post
     apt-get -y update
     apt-get -y install fortune
